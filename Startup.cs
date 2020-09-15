@@ -23,8 +23,12 @@ namespace IdentityTutorialGlavni
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            //services.AddMvc();
             //enkapsulira addrazorpages i addcontrollerswithviews u jednu metodu
+            //ali usput dodaje jos neke stvari, tipa CORS
+            //koje mozda mogu ometati tutorijal ubuduce
+            services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
